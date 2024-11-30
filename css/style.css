@@ -163,7 +163,7 @@ p{
   } 
 .usuario {
   margin-top: 10% ;
-  font-size: 40px;
+  font-size: 30px;
   padding-top: 10%;
   grid-column: 8/12;
   text-align: center;
@@ -175,7 +175,7 @@ p{
   height: 100%;
   margin-top: 35%;}
 .contrasena{
-  font-size: 40px;
+  font-size: 30px;
   grid-column: 8/12;
   text-align: center;
   grid-row: 3/4;
@@ -192,6 +192,70 @@ p{
   text-align: center;
   padding-top: 5%;
 }
+
+/*  Contacto  */
+.main-contacto { display: grid;
+  grid-template-rows: repeat(8, auto);
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 5px;
+}
+
+.imagen-contacto {
+  padding-top: 10%;
+  grid-column: 4/10;
+  grid-row: 8/8;
+  height: 59%;
+}
+.dudas {
+  grid-column: 2/12;
+  grid-row: 2/2;
+  font-size: 25px;
+  margin-top: 3%;
+  color: rgb(27, 53, 130);
+  }
+.nombre, .correo, .escribe {
+      font-style: normal;
+      text-align: center;
+      grid-column: 4 / 9; 
+      padding: 3%;
+    }
+.nombre {
+      margin-top: 10%;
+      grid-row: 3 / 8;
+    }
+  
+.correo {
+      margin-top: 4%;
+      grid-row: 5 / 5;
+    }
+
+.escribe {
+      grid-row: 6 / 6;
+    }
+.input-uno, .input-dos, .input-tres, .enviar {
+      grid-column: 5 / 8; 
+      width: 100%; 
+      padding: 10px;
+    }
+.input-uno {
+      grid-row: 4/4;
+      margin-top: 30%;
+  }
+.input-dos {
+      grid-row: 5/5;
+      margin-top: 20%;
+  }
+.input-tres {
+      grid-row: 6/6;
+      width: 100%;
+      margin-top: 15%;
+  }
+  
+.enviar {
+      grid-row: 7/7;
+      margin-top: 40%;
+      width: 100%;}  
+
 footer{
   padding: 2%;
   font-size: 20px;
