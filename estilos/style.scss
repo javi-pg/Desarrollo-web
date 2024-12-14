@@ -1,0 +1,122 @@
+// Variables de colores
+$primary-color: rgb(27, 53, 130);
+$secondary-color: rgb(129, 143, 188);
+$background-color-footer: #1f3871;
+$text-color-footer: white;
+// Tipografía
+$font-family-base: Verdana, sans-serif;
+// Espaciado y bordes
+$grid-gap: 5px;
+$border-thick: 10px solid $primary-color;
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: $breakpoint-mobile) {
+        @content;
+      }
+    } @else if $breakpoint == tablet {
+      @media (max-width: $breakpoint-tablet) {
+        @content;
+      }
+    }
+  }
+// Mixin para fuentes y colores de texto
+  @mixin text-style($color, $align: left, $spacing: 0) {
+    color: $color;
+    text-align: $align;
+    letter-spacing: $spacing;
+  }
+  * {
+    font-family: $font-family-base;
+  }
+  
+@import "paginas/index";
+@import "paginas/noticias";
+@import "paginas/somos";
+@import "paginas/contacto";
+@import "paginas/ingresar";
+
+// Estructura principal
+.main {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gap;
+    @include respond-to(mobile) {
+      grid-template-rows: repeat(8, auto);
+  }
+}
+  // Parrafos y titulos
+p {
+    @include text-style($primary-color, justify);
+    background-color: $secondary-color;
+    font-family: $font-family-base;
+  }
+.titulos {
+    @include text-style($primary-color, center, 10px);
+    padding-top: 100px;
+    grid-column: 3 / 10;
+    grid-row: 1 / 1;
+    border: $border-thick;
+    height: fit-content;
+    @include respond-to(mobile) {
+      width: 100%;
+      grid-column: 2/12;
+      grid-row: 1/1;
+    }
+  }
+  
+h2 {
+    grid-column: 2 / 11; 
+    grid-row: 3 / 3;
+    color: $primary-color;
+    border: $border-thick;
+    height: fit-content;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    @include respond-to(mobile) {
+      width: 90%;
+      grid-column: 2/13;
+  }
+}
+
+// Footer
+footer {
+    padding: 2%;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    background-color: $background-color-footer;
+  
+    p {
+      background-color: $background-color-footer;
+      color: $text-color-footer;
+      text-align: center;
+    }
+  
+    .linkedin {
+      color: $text-color-footer;
+      text-decoration: none;
+      font-size: 30px;
+    }
+  }
+  html {
+    font-size: 16px;
+  
+    @include respond-to(mobile) {
+      font-size: 14px;
+    }
+  
+    @include respond-to(tablet) {
+      font-size: 15px;
+    }
+  }
+
+
+
+
+  

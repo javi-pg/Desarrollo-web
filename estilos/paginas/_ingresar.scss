@@ -1,0 +1,71 @@
+.imagen-ingresar {
+    grid-column: 1/8;
+    grid-row: 2/5;
+    width: 90%;
+    padding-left: 30%;
+        @include respond-to(mobile) {
+            grid-column: 1 / -1;
+            grid-row: 8;
+            padding-left: 0; 
+            width: 100%
+        }
+    } 
+  .usuario {
+    margin-top: 10% ;
+    font-size: 30px;
+    padding-top: 10%;
+    grid-column: 8/12;
+    text-align: center;
+    grid-row: 2/5;
+    @include respond-to(mobile) {
+        grid-column: 1 / -1;
+        grid-row: 2; 
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    }
+  .input-uno-ingresar {
+    grid-column: 9/13;
+    grid-row: 2/3;
+    height: 100%;
+    margin-top: 35%;
+    @include respond-to(mobile) {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        margin-top: 0;
+        height: auto;
+      }}
+  .contrasena{
+    font-size: 30px;
+    grid-column: 8/12;
+    text-align: center;
+    grid-row: 3/4;
+    @include respond-to(mobile) {
+        grid-column: 1 / -1;
+        grid-row: 4; 
+        font-size: 20px;
+      }
+    }
+  .input-dos-ingresar {
+    grid-column: 9/13;
+    grid-row: 3/4;
+    margin-top: 20%;
+    @include respond-to(mobile) {
+        grid-column: 1 / -1;
+        grid-row: 5; 
+        margin-top: 0;
+      }
+  }
+  
+  .ingresar {
+    grid-column: 8/12;
+    grid-row: 4/4;
+    text-align: center;
+    padding-top: 5%;
+    @include respond-to(mobile) {
+        grid-column: 1 / -1; 
+        grid-row: 6; 
+        padding-top: 1rem;
+      }
+  }
+  
