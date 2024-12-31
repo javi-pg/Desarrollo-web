@@ -296,10 +296,10 @@
 }
 
 .imagen-contacto {
-  padding-top: 10%;
+  padding: 10%;
   grid-column: 4/10;
   grid-row: 8/8;
-  height: 59%;
+  height: 50em;
 }
 @media (max-width: 768px) {
   .imagen-contacto {
